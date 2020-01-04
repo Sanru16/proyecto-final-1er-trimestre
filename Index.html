@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Proyecto final 1er trimestre</title>
+		<meta charset ="UTF-8">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js">
+		</script>
+		
+		<style type="text/css">
+			.Mate{
+				background-color: #FF0000;
+				text-align:center;
+			}
+			.Lengua{
+				background-color: #0099FF;
+				text-align:center;
+			}
+			.Física{
+				background-color: #33FF33;
+				text-align:center;
+			}
+			.TI{
+				background-color: #FF9900;
+				text-align:center;
+			}
+			.TIC{
+				background-color: #FFFF33;
+				text-align:center;
+			}
+			.Dibujo{
+				background-color: #CCCCCC;
+				text-align:center;
+			}
+			.Inglés{
+				background-color:#FF00FF;
+				text-align:center;
+			}
+			.Historia{
+				background-color:#996600;
+				text-align:center;
+			}
+			.Horas{
+				background-color: #A0F0A0;
+				text-align:center;
+			}
+			.Dias{
+				background-color: #FFCCCC;
+				text-align:center;
+			}
+			.Horario{
+				background-color: #AA55CC;
+				text-align:center;
+			}
+			.tablaH{
+				width:1000px;
+				height:400px;
+				margin-left:0rem;
+				
+			}
+			.tiempo{
+			margin-left:50rem;
+				}
+
+				
+			
+			
+			
+			
+			
+			#contenedor_reloj{
+					background-color: #FFFFFF;
+					margin-left: 55rem;
+					padding-top: 0rem;
+					margin-right: 52.5rem;
+					padding-bottom:0rem;
+					border: 0 solid #cccccc;
+					text-align: left;
+				}
+			#contenedor_titulo{
+					background-color:#FFFF00;
+					color:#00AA00;
+					width: 0px;
+					height: 0px;
+					text-align: left;
+				}
+			#contenedor_hora{
+					
+					width: 12rem;
+					height: 4rem;
+					background-color:#00EE00;
+					color:orange;
+					border:solid #00DD00;   
+					margin: 0rem;
+					padding: 0rem;
+					text-align: left;
+					font-size: 3rem;	
+				}
+				
+			p{
+				text-align: center;
+			}
+			body{
+				background-color: #FFFFFF;
+			}
+	
+			</style>
+		<script>
+			function f_hora(){
+				var hoy = new Date();
+				var h = hoy.getHours();
+				var m = hoy.getMinutes();
+				var s = hoy.getSeconds();
+				document.getElementById('contenedor_hora').innerHTML = h+":"+m+":"+s;
+				setInterval ( f_hora , 1000);
+			}
+			
+		</script>
+		<script>
+		function media{ 
+		
+		}
+		</script>
+
+		
+	</head>
+	
+	
+	
+	<body onload=f_hora() >
+ 
+		<div id="contenedor_reloj">	
+		<h1 id="contenedor_titulo"></h1>
+		<button id="contenedor_hora" onclick="f_hora()">actualizar la hora</button>
+		</div>
+		
+		
+		<a class="tiempo" target="_blank" href="https://hotelmix.es/weather/laguna-de-duero-147364"><img src="https://w.bookcdn.com/weather/picture/1_147364_1_4_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=582&anc_id=33824"  alt="booked.net"/></a>
+
+		<script>
+			function setup() {            
+				createCanvas(1910, 300);           
+				background(255);
+			  
+			} 
+			function draw() {
+				stroke(random(255), random(255), random(255));  
+				line( width/4, height/4, mouseX, mouseY);
+				line( 3*width/4, height/4, mouseX, mouseY);
+				line( width/4, 3*height/4, mouseX, mouseY);
+				line( 3*width/4, 3*height/4, mouseX, mouseY);
+				}
+			function mousePressed() {
+				background(random(255),random(255),random(255));
+				
+			}
+
+		</script>
+	
+		<table class="tablaH"border = 2>
+			<tr>
+					
+				<td class="Horario">Horario</td>
+				<td class="Dias">Lunes</td>
+				<td class="Dias">Martes</td>
+				<td class="Dias">Miércoles</td>
+				<td class="Dias">Jueves</td>
+				<td class="Dias">Viernes</td>
+			</tr>
+			<tr>
+				<td class="Horas">8:30-9:20</td>
+				<td class="TIC">TIC</td>
+				<td class="TI">TI</td>
+				<td class="TI">TI</td>
+				<td class="TI">TI</td>
+				<td class="TI">TI</td>
+			</tr>
+			<tr>
+				<td class="Horas">9:25-10:15</td>
+				<td class="Inglés">Inglés</td>
+				<td class="Historia">Historia</td>
+				<td class="Historia">Historia</td>
+				<td class="Dibujo">Dibujo</td>
+				<td class="TIC">TIC</td>
+			</tr>
+			<tr>
+				<td class="Horas">10:20-11:10</td>
+				<td class="Física">Física</td>
+				<td class="Lengua">Lengua</td>
+				<td class="Dibujo">Dibujo</td>
+				<td class="TIC">TIC</td>
+				<td class="Física">Física</td>
+			</tr>
+			<tr>
+				<td class="Horas">11:40-12:30</td>
+				<td class="Historia">Historia</td>
+				<td class="Inglés">Inglés</td>
+				<td class="Lengua">Lengua</td>
+				<td class="Lengua">Lengua</td>
+				<td class="Lengua">Lengua</td>
+			</tr>
+			<tr>
+				<td class="Horas">12:35-13:35</td>
+				<td class="Dibujo">Dibujo</td>
+				<td class="Dibujo">Dibujo</td>
+				<td class="Física">Física</td>
+				<td class="Historia">Historia</td>
+				<td class="Mate">Mate</td>
+			</tr>
+			<tr>
+				<td class="Horas">13:30-14:20</td>
+				<td class="Mate">Mate</td>
+				<td class="Mate">Mate</td>
+				<td class="Mate">Mate</td>
+				<td class="Física">Física</td>
+				<td class="Inglés">Inglés</td>
+			</tr>
+		</table>
+
+
+		
+	<!--	<table class="tablaM" border = 2>
+			<tr>
+				
+				<td class="Horario">Asignaturas</td>
+				<td class="Dias">Notas</td>
+				<td class="Dias">Nota Media</td>
+			</tr>
+			<tr>
+				<td class="Mate">Mate</td>
+				<td class="TIC">TIC</td>
+				
+			</tr>
+			<tr>
+				<td class="Inglés">Inglés</td>
+				<td class="Historia">Historia</td>
+				
+			</tr>
+			<tr>
+				<td class="Horas">Física</td>
+				<td class="Física">Física</td>
+			</tr>
+			<tr>
+				<td class="Historia">Historia</td>
+				<td class="Inglés">Inglés</td>
+				
+			</tr>
+			<tr>
+				<td class="Dibujo">Dibujo</td>
+				<td class="Dibujo">Dibujo</td>
+				
+			</tr>
+			<tr>
+				<td class="Mate">Mate</td>
+				<td class="Mate">Mate</td>
+			</tr>
+			<tr>
+				<td class="Mate">Mate</td>
+				<td class="Mate">Mate</td>
+			</tr>
+			<tr>
+				<td class="Mate">Mate</td>
+				<td class="Mate">Mate</td>
+			</tr>
+		</table>	-->
+		
+		
+		
+		
+		
+	</body>
+
+
+</html>
